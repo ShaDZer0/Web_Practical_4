@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Практична робота 4</title>
+  <style>
+    body {
+      background-color: #eef2f7;
+      color: #1f2a37;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 24px 16px 48px;
+    }
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 24px 32px 36px;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    }
+    h1 { text-align: center; font-size: 30px; color: #12355b; }
+    h2 { font-size: 22px; color: #12355b; border-bottom: 2px solid #12355b; padding-bottom: 4px; margin-top: 40px; }
+    h3 { font-size: 19px; font-style: italic; color: #2d4a6b; }
+    table { border-collapse: collapse; margin: 16px 0; }
+    th, td { border: 1px solid #1f2a37; padding: 8px 12px; }
+    caption { font-weight: bold; font-size: 18px; padding: 8px; color: #12355b; }
+    .full { width: 100%; }
+    .full th { background-color: #12355b; color: #ffffff; text-align: center; }
+    .schedule { width: 100%; }
+    .schedule th { background-color: #12355b; color: #fff; text-align: center; }
+    .schedule .day { background-color: #dbe6f3; font-weight: bold; text-align: center; vertical-align: middle; }
+    .schedule .pause { background-color: #fff3cd; text-align: center; font-style: italic; }
+    #catalog { width: 100%; font-family: Arial, sans-serif; font-size: 15px; border: 3px solid #7a1f2b; }
+    #catalog th { background-color: #7a1f2b; color: #ffffff; text-align: center; padding: 10px 12px; }
+    #catalog thead tr:first-child th { background-color: #4a0f18; }
+    #catalog tbody tr:nth-child(odd)  { background-color: #ffffff; }
+    #catalog tbody tr:nth-child(even) { background-color: #f6e3e6; }
+    #catalog td.author { background-color: #fbf1f2; font-weight: bold; vertical-align: middle; }
+    #catalog td.num, #catalog td.year { text-align: center; }
+    ol li, ul li { margin: 4px 0; }
+  </style>
+</head>
+<body>
+<div class="page">
+  <h1>Практична робота 4. Таблиці та списки в HTML</h1>
+  <h2>Завдання 2. Успішність студентів групи</h2>
+  <table class="full">
+    <tr>
+      <th>№ з/п</th>
+      <th>Прізвище</th>
+      <th>Ім’я</th>
+      <th>Назва дисципліни</th>
+      <th>Оцінка</th>
+    </tr>
+    <tr><td align="center">1</td><td>Коваленко</td><td>Олександр</td><td>Web-програмування</td><td align="center">92</td></tr>
+    <tr><td align="center">2</td><td>Мельник</td><td>Марія</td><td>Бази даних</td><td align="center">88</td></tr>
+    <tr><td align="center">3</td><td>Бондаренко</td><td>Іван</td><td>Основи програмування</td><td align="center">75</td></tr>
+    <tr><td align="center">4</td><td>Ткаченко</td><td>Софія</td><td>Інформатика</td><td align="center">95</td></tr>
+    <tr><td align="center">5</td><td>Шевчук</td><td>Андрій</td><td>Англійська мова</td><td align="center">81</td></tr>
+    <tr><td align="center">6</td><td>Кравченко</td><td>Олена</td><td>Операційні системи</td><td align="center">69</td></tr>
+  </table>
+  <h2>Завдання 3. Розклад занять на один навчальний день</h2>
+  <table class="schedule">
+    <caption>Розклад занять групи ПС 4-1 на п'ятницю</caption>
+    <tr>
+      <th colspan="5">Розклад занять</th>
+    </tr>
+    <tr>
+      <th>День тижня</th>
+      <th>Час</th>
+      <th>Дисципліна</th>
+      <th>Викладач</th>
+      <th>Аудиторія</th>
+    </tr>
+    <tr>
+      <td class="day" rowspan=9>П'ятниця</td>
+      <td>08:00 – 09:20</td>
+      <td></td>
+      <td></td>
+      <td align="center"></td>
+    </tr>
+    <tr>
+      <td class="pause" colspan="4">Перерва 9:20 – 9:30</td>
+    </tr>
+    <tr>
+      <td>9:30 – 10:50</td>
+      <td>Конструювання програмного забезпечення</td>
+      <td>Трембовецька Т.В.</td>
+      <td align="center">210</td>
+    </tr>
+    <tr>
+      <td class="pause" colspan="4">Перерва 10:50 – 11:00</td>
+    </tr>
+    <tr>
+      <td>11:00 – 12:20</td>
+      <td>Організація комп'ютерних мереж</td>
+      <td>Поломаренко Н.В.</td>
+      <td align="center">209</td>
+    </tr>
+    <tr>
+      <td class="pause" colspan="4">Перерва 12:20 – 12:50</td>
+    </tr>
+    <tr>
+      <td>12:50 – 14:10</td>
+      <td>Основи ІТ</td>
+      <td>Запорожець М.В.</td>
+      <td align="center">211</td>
+    </tr>
+    <tr>
+      <td class="pause" colspan="4">Перерва 14:10 – 14:20</td>
+    </tr>
+    <tr>
+      <td>14:20 – 15:40</td>
+      <td>Основи національного супротиву Військова підготовка</td>
+      <td>Шевченко М.Ф.</td>
+      <td align="center">112</td>
+    </tr>
+  </table>
+  <h2>Завдання 4. Інформаційна сторінка бібліотеки</h2>
+  <p>Каталог містить книги українських авторів та інформацію про наявність примірників у бібліотеці.</p>
+  <table id="catalog">
+    <caption>Каталог книг</caption>
+    <thead>
+      <tr>
+        <th colspan="4">Інформація про книгу</th>
+        <th rowspan="2">Кількість примірників</th>
+      </tr>
+      <tr>
+        <th>Назва</th>
+        <th>Автор</th>
+        <th>Рік видання</th>
+        <th>Жанр</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Кобзар</td>
+        <td class="author" rowspan="2">Тарас Шевченко</td>
+        <td class="year">1840</td>
+        <td>Поезія</td>
+        <td class="num">5</td>
+      </tr>
+      <tr>
+        <td>Гайдамаки</td>
+        <td class="year">1841</td>
+        <td>Поема</td>
+        <td class="num">3</td>
+      </tr>
+      <tr>
+        <td>Захар Беркут</td>
+        <td class="author" rowspan="2">Іван Франко</td>
+        <td class="year">1883</td>
+        <td>Історична повість</td>
+        <td class="num">4</td>
+      </tr>
+      <tr>
+        <td>Перехресні стежки</td>
+        <td class="year">1900</td>
+        <td>Роман</td>
+        <td class="num">2</td>
+      </tr>
+      <tr>
+        <td>Лісова пісня</td>
+        <td class="author">Леся Українка</td>
+        <td class="year">1911</td>
+        <td>Драма-феєрія</td>
+        <td class="num">6</td>
+      </tr>
+      <tr>
+        <td>Тіні забутих предків</td>
+        <td class="author">Михайло Коцюбинський</td>
+        <td class="year">1911</td>
+        <td>Повість</td>
+        <td class="num">3</td>
+      </tr>
+      <tr>
+        <td>Маруся Чурай</td>
+        <td class="author">Ліна Костенко</td>
+        <td class="year">1979</td>
+        <td>Історичний роман у віршах</td>
+        <td class="num">2</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>Завдання 5. Нумерований список</h2>
+  <h3>Мої улюблені дисципліни в коледжі</h3>
+  <ol>
+    <li>ООП</li>
+    <li>Бази даних</li>
+    <li>Організація комп'ютерних мереж</li>
+    <li>Інформатика</li>
+    <li>Англійська мова</li>
+  </ol>
+  <h2>Завдання 6. Ненумерований список</h2>
+  <h3>Мої улюблені справи в позаурочний час</h3>
+  <ul>
+    <li>Відеоігри</li>
+    <li>Прогулянки на свіжому повітрі</li>
+    <li>Читання книг</li>
+    <li>Спорт</li>
+    <li>Прослуховування музики</li>
+  </ul>
+</div>
+</body>
+</html>
